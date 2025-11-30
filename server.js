@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 4. Get your API key from environment variables
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${GEMINI_API_KEY}`;
+const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 // 5. Create the /api/generate endpoint
 app.post('/api/generate', async (req, res) => {
